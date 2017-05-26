@@ -84,7 +84,7 @@ class SadlModelManagerProviderTest {
 			uri "http://sadl.org.Tests/ModelName1" alias foo.
 		'''.assertValidatesTo [ jenaModel, issues |
 			assertNotNull(jenaModel)
-			assertFalse(issues.size == 0)
+			assertTrue(issues.size == 0)
 		]
 		assertValidatesTo(model.resourceSet, '''
 			uri "http://sadl.org.Tests/ModelName2" alias foo.
